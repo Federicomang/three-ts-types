@@ -17,6 +17,11 @@ export class Loader<TData = unknown, TUrl = string> {
     withCredentials: boolean;
 
     /**
+     * @default false
+     */
+    useCredentialsForResources: boolean;
+
+    /**
      * @default ''
      */
     path: string;
@@ -42,6 +47,7 @@ export class Loader<TData = unknown, TUrl = string> {
 
     setCrossOrigin(crossOrigin: string): this;
     setWithCredentials(value: boolean): this;
+    setUseCredentialsForResources(value: boolean): this;
     setPath(path: string): this;
     setResourcePath(resourcePath: string): this;
     setRequestHeader(requestHeader: { [header: string]: string }): this;
